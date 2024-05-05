@@ -45,18 +45,18 @@ menu
 
 if [[ $opcion -eq 1 ]]; then
     # Opcion1 > Crear directorio
-    echo "Ha seleccionado la opcion 1"
+    echo "You have selected 'first option' (Create directory)."
     # Llamar a la funcion createdirectory
     createdirectory
 
 elif [[ $opcion -eq 2 ]]; then
     # Opcion2 > Eliminar directorio
-    echo "Ha seleccionado la opcion 2"
+    echo "You have selected 'second option' (Remove directory)."
 
 elif [[ $opcion -eq 3 ]]; then
     # Opcion3 > Clonar directorio
-    echo "Ha seleccionado la opcion 3"
+    echo "You have selected 'third option' (Clone directory)."
     clonedirectory
 else
-    echo "No se ha ingresado un valor valido [del 1 al 3]."
+    echo "No data was found [select a number between 1 and 3]."
 fi

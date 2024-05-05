@@ -17,7 +17,9 @@ else
     # Request for install
     read -p "Do you want to install the program? [y/n]: " requestinstallation
     if [[ $requestinstallation == "y" || $requestinstallation == "Y" ]]; then
-
-
+        echo "[#] Starting download, this may took a while..."
+        # Start installation
+    else
+        echo "[#] Installation cancelled."
     fi
 fi

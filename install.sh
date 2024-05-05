@@ -19,6 +19,19 @@ else
     if [[ $requestinstallation == "y" || $requestinstallation == "Y" ]]; then
         echo "[#] Starting download, this may took a while..."
         # Start installation
+        # Search for dirgestion.sh
+        while [[ ! -f $SCRIPT_DIR/ProgramFiles/dirgestion.sh ]]; do
+            # While program does not exist, clone it in /usr/local/sbin
+            sudo cp "$SCRIPT_DIR/ProgramFiles/dirgestion.sh" "$main_file"
+            if [[ -f "$SCRIPT_DIR/ProgramFiles/dirgestion.sh" ]]; then
+                # Say that exist
+                echo "[#] Program found, cloning..."
+            else
+                echo "[#] There was something wrong..."
+                echo "[#] Trying again in 2s..."
+                sleep 2
+            fi
+        done
     else
         echo "[#] Installation cancelled."
     fi

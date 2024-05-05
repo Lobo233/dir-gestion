@@ -2,11 +2,9 @@
 
 # Progama por Nisamov y Lobo_233
 
-
-# Declaracion de variables
-
+# Variable declaration
 function menu(){
-# Funcion de menu
+# Menu function
 echo "| [Directory Gestion] |"
 echo "| [Options]:"
 echo "| Option '1' > Create directory"
@@ -16,16 +14,16 @@ read -p "Ingrese su opcion: " opcion
 }
 
 function createdirectory(){
-    read -p "Ingrese el nombre a dar al directorio: " directoryname
-    read -p "Ingrese la ruta a crear el directorio [Ruta absoluta]: " rutedirectory
-    # Creamos el directorio en la ruta indicada por el usuario
+    read -p "Enter directory's name: " directoryname
+    read -p "Enter directory's creation route [Absolute route]: " rutedirectory
+    # Dir creation with dir's name in dir's route
     sudo mkdir $directoryname $rutedirectory
-    # Ejemplo de uso:
+    # Use example:
     # dirgestion directorioejemplo /usr/local/sbin
 }
 
 function deletedirectory(){
-    # Solicitar datos al usuario
+    # Ask data to user
     read -p "Ingrese la ruta absoluta del directorio a eliminar: " deletedirectory
     # Eliminar ruta de forma recursiva y forzosa
     sudo rm -rf $deletedirectory

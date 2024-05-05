@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Progama por Nisamov y Lobo_233
+# Program Script by Nisamov & Lobo_233
 
 # Variable declaration
 function menu(){

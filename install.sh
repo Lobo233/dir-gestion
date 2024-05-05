@@ -1,5 +1,7 @@
-# Sacado de: https://github.com/Nisamov/autonetplan/blob/main/install.sh
-# Ruta del directorio donde se encuentra el script de instalación
+#!/bin/bash
+
+# Installation script by Nisamov
+
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 # Var declaration

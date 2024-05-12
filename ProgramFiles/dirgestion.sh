@@ -5,7 +5,7 @@
 
 # Declaracion de variables
 
-function menu(){
+function optionmenu(){
 # Funcion de menu
 echo "| [Directory Gestion] |"
 echo "| [Options]:"
@@ -48,8 +48,8 @@ function backupdirectory(){
     sudo cp -r "$clonedirectory" "$directorydestination.bk"
 }
 
-# Llamamos a la funcion menu 'menu'
-menu
+# Llamamos a la funcion optionmenu
+optionmenu
 
 if [[ $opcion -eq 1 ]]; then
     # Opcion1 > Crear directorio

@@ -3,3 +3,4 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 # Proceso de instalacion de programa
+sudo cp -r $SCRIPT_DIR/ProgramFiles/dirgestion.sh /local/usr/bin/dirgestion

@@ -12,6 +12,7 @@ echo "| [Options]:"
 echo "| Option '1' > Create directory"
 echo "| Option '2' > Remove directory"
 echo "| Option '3' > Clone directory"
+echo "| Option '4' > Backup"
 read -p "Ingrese su opcion: " opcion
 }
 
@@ -39,6 +40,13 @@ function clonedirectory(){
     sudo cp -r $clonedirectory $directorydestination
 }
 
+function backupdirectory(){
+    # Crear copia de seguridad del directorio
+    read -p "Ingrese la ruta del fichero a guardar: " clonedirectory
+    read -p "ingrese la ruta de destino: " directorydestination
+    # Donde va el directorio
+    sudo cp -r "$clonedirectory" "$directorydestination.bk"
+}
 
 # Llamamos a la funcion menu 'menu'
 menu
@@ -57,6 +65,11 @@ elif [[ $opcion -eq 3 ]]; then
     # Opcion3 > Clonar directorio
     echo "Ha seleccionado la opcion 3"
     clonedirectory
+
+elif [[ $opcion -eq 4 ]]; then
+    # Opcion4 > Copia de seguiridad del directorio
+    echo "Ha seleccionado la opcion 4"
+    backupdirectory
 else
-    echo "No se ha ingresado un valor valido [del 1 al 3]."
+    echo "No se ha ingresado un valor valido [del 1 al 4]."
 fi

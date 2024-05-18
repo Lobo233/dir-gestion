@@ -60,6 +60,7 @@ if [[ $opcion -eq 1 ]]; then
 elif [[ $opcion -eq 2 ]]; then
     # Opcion2 > Eliminar directorio
     echo "Ha seleccionado la opcion 2"
+    deletedirectory
 
 elif [[ $opcion -eq 3 ]]; then
     # Opcion3 > Clonar directorio
